@@ -10,10 +10,6 @@ DECLARE
     lErrMsg               VARCHAR2(2000);
 
 BEGIN
- 
-    IF 1 = 1 THEN
-        RAISE EXIT_ERROR;   -- simulate warning/error
-    END IF;
 
 END;
 /
