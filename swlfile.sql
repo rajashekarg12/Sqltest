@@ -6,10 +6,3 @@ DECLARE
     eExit                 EXCEPTION;
     vGeneralException     EXCEPTION;
 
-    -- Declare Variables
-    lErrMsg               VARCHAR2(2000);
-
-BEGIN
-
-END;
-/
