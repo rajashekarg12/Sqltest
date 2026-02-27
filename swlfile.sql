@@ -10,5 +10,4 @@ BEGIN
 END;
 /
 
--- This will cause SQL*Plus to wait for input
-SELECT * FROM dual WHERE dummy='&ENTER_VALUE';
+SELECT * FROM dual WHERE dummy='&VAL';
