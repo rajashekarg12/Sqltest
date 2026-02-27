@@ -6,17 +6,11 @@ AS
     EXIT_NOERROR          EXCEPTION;
     eExit                 EXCEPTION;
     vGeneralException     EXCEPTION;
-
-    lErrMsg VARCHAR2(2000);
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Start procedure');
-
-    -- Intentional compilation error
-    invalid_variable := 10;
-
-EXCEPTION
-    WHEN EXIT_ERROR THEN
-        lErrMsg := 'Error encountered';
-        DBMS_OUTPUT.PUT_LINE(lErrMsg);
+    -- Simulate long/hanging deployment
+    DBMS_LOCK.SLEEP(600);  -- 10 minutes
 END;
 /
+
+-- Execute it (this is what causes the hang)
+EXEC test_deploy_proc;
